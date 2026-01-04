@@ -239,6 +239,24 @@
             tile.className = "tile";
             rowDiv.appendChild(tile);
             row.push(tile);
+
+            tile.onclick = () => {
+              const char = tile.innerText;
+              if (!char) return;
+
+              const keyElement = document.getElementById(`key-${char}`);
+              if (keyElement) {
+                // 一瞬だけ光らせる演出
+                keyElement.style.transition = "0.2s";
+                keyElement.style.transform = "scale(1.2)";
+                keyElement.style.boxShadow = "0 0 15px white";
+
+                setTimeout(() => {
+                  keyElement.style.transform = "scale(1)";
+                  keyElement.style.boxShadow = "none";
+                }, 300);
+              }
+            };
           }
           boardEl.appendChild(rowDiv);
           boardGrid.push(row);
