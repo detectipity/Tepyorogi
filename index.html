@@ -6,7 +6,7 @@
     <title>テピョロギ - 古代石板の解読</title>
     <style>
       body {
-        background-color: #1a1a1a;
+        background-color: #1b2732;
         color: #e0e0e0;
         font-family: sans-serif;
         display: flex;
@@ -37,8 +37,8 @@
       .tile {
         width: 12vw; /* 画面幅に対して可変 */
         height: 12vw;
-        max-width: 45px; /* 大きくなりすぎ防止 */
-        max-height: 45px;
+        max-width: 42px; /* 大きくなりすぎ防止 */
+        max-height: 42px;
         border: 2px solid #444;
         display: flex;
         align-items: center;
@@ -192,7 +192,6 @@
     <div class="controls">
       <button id="back-btn" onclick="backspace()">1文字戻す</button>
       <button id="submit-btn" onclick="submitGuess()">解読を実行</button>
-      <button id="reset-btn" onclick="resetGame()">新しい石板を呼ぶ</button>
     </div>
 
     <div id="keyboard-container">
@@ -200,6 +199,8 @@
     </div>
 
     <p id="status">石板に触れ、呪文を紡げ...</p>
+
+    <button id="reset-btn" onclick="resetGame()">新しい石板を呼ぶ</button>
 
     <script>
       const ALL_CHARS =
