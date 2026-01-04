@@ -3,11 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
     <title>テピョロギ - 古代石板の解読</title>
     <style>
       body {
@@ -19,9 +14,6 @@
         align-items: center;
         margin: 0;
         padding: 10px;
-        height: 100svh; /* ツールバーを除いた画面の高さに固定 */
-        /* overflow: hidden; /* 画面が揺れないようにスクロールを禁止 */
-        justify-content: space-around; /* 要素を均等に配置 */
       }
       h1 {
         letter-spacing: 0.3rem;
@@ -45,8 +37,8 @@
       .tile {
         width: 12vw; /* 画面幅に対して可変 */
         height: 12vw;
-        max-width: 50px; /* 大きくなりすぎ防止 */
-        max-height: 50px;
+        max-width: 45px; /* 大きくなりすぎ防止 */
+        max-height: 45px;
         border: 2px solid #444;
         display: flex;
         align-items: center;
@@ -60,7 +52,7 @@
       /* 6x6 タッチキーボード */
       #keyboard-container {
         position: relative;
-        padding: 20px;
+        padding: 5px;
         background: #2a2a2a;
         border-radius: 12px;
         border-top: 4px solid #c0392b; /* 上下に赤（列ガイド） */
@@ -69,7 +61,7 @@
         border-right: 4px solid #2980b9;
         box-sizing: border-box; /* 境界線を含めてサイズ計算 */
         width: 95%; /* 画面幅いっぱいにしない */
-        max-width: 400px; /* PCで見ても広がりすぎない */
+        max-width: 350px; /* PCで見ても広がりすぎない */
         margin: 10px auto;
         display: flex;
         justify-content: center;
@@ -80,7 +72,7 @@
         grid-template-columns: repeat(6, 1fr);
         gap: 8px;
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
         background: #333;
         padding: 10px;
         border-radius: 8px;
@@ -102,10 +94,10 @@
       }
 
       .controls {
-        margin: 15px 0;
+        margin: 5px 0;
       }
       button#submit-btn {
-        padding: 10px 30px;
+        padding: 5px 10px;
         font-size: 1.1rem;
         background: #f39c12;
         color: white;
@@ -115,7 +107,7 @@
       }
 
       #back-btn {
-        padding: 10px 20px;
+        padding: 5px 10px;
         font-size: 1.1rem;
         background: #7f8c8d;
         color: white;
@@ -126,7 +118,7 @@
       }
 
       #reset-btn {
-        padding: 10px 20px;
+        padding: 5px 10px;
         font-size: 1.1rem;
         background: #27ae60;
         color: white;
